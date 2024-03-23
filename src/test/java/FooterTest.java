@@ -18,6 +18,7 @@ public class FooterTest extends BaseClass{
         quitBrowser();
     }
 
+//    verifying the number of footer links
     @Test
     public void footerT(){
         int expected = 9;
@@ -25,6 +26,7 @@ public class FooterTest extends BaseClass{
         Assert.assertEquals(actual,expected);
     }
 
+//    verifying footer links (broken or not)
     @Test
     public void verifyFooterLinksT(){
         footerClass.verifyFooterLinks();

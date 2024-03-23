@@ -17,6 +17,7 @@ public class BannerTest extends BaseClass{
         quitBrowser();
     }
 
+//    Testing if banner is available
    @Test
    public void bannerAvailable(){
         boolean expected = true;
@@ -24,11 +25,13 @@ public class BannerTest extends BaseClass{
         Assert.assertEquals(actual,expected);
     }
 
+//    verifying breadcrump links
     @Test
     public void verifyBreadcrumpT(){
         bannerClass.verifyBreadcrumpLinks();
     }
 
+//    testing if banner title is accurate
     @Test
     public void bannerTitleT(){
         String actual = bannerClass.bannerTitleC();
