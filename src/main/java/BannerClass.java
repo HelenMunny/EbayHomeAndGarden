@@ -11,6 +11,12 @@ public class BannerClass extends BaseClass{
         return banner.isDisplayed();
     }
 
+    @FindBy(xpath = "//div[@class=\"pagecontainer__top\"] //a")
+    List <WebElement> bannerLinks;
+    public Integer countBannerLinks(){
+        return bannerLinks.size();
+    }
+
     @FindBy(xpath = "//a[@class=\"seo-breadcrumb-text\"]")
     List<WebElement> breadcrumpLinks;
     public void verifyBreadcrumpLinks(){

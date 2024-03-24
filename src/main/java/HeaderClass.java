@@ -22,6 +22,13 @@ public class HeaderClass extends BaseClass{
         return headerLinks.size();
     }
 
+    public void verifyHeaderLinks(){
+        for(WebElement link:headerLinks){
+            String url = link.getAttribute("href");
+            verifyLinks(url);
+        }
+    }
+
 
     @FindBy(id = "gh-la")
     WebElement logoLink;

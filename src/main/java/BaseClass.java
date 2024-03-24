@@ -48,7 +48,7 @@ public void verifyLinks(String url){
         try{
             URL link = new URL(url);
             HttpURLConnection httpURLConnection = (HttpURLConnection) link.openConnection();
-            httpURLConnection.setConnectTimeout(3000);
+            httpURLConnection.setConnectTimeout(1000);
             httpURLConnection.connect();
 
             if(httpURLConnection.getResponseCode()==200){

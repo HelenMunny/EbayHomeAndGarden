@@ -9,6 +9,7 @@
         <classes>
             <class name="HeaderTest"/>
             <class name="BannerTest"/>
+            <class name="ContainerTest"/>
             <class name="FooterTest" />
         </classes>
     </test>

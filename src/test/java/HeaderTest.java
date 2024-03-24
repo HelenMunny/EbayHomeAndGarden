@@ -30,7 +30,12 @@ public class HeaderTest extends BaseClass{
     public void testHeaderLinks(){
         Integer actual = headerClass.setHeaderLinks();
         Assert.assertTrue(actual>=69);
+    }
 
+//    checking if there is any broken link in the header
+    @Test(enabled = false)
+    public void verifyHeaderLinksT(){
+        headerClass.verifyHeaderLinks();
     }
 
 //    Testing if logo image+link is working

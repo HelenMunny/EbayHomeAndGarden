@@ -39,4 +39,11 @@ public class BannerTest extends BaseClass{
         Assert.assertEquals(actual,expected);
     }
 
+//    checking the number of links in banner
+    @Test
+    public void countBannerLinksT(){
+        Integer actual = bannerClass.countBannerLinks();
+        Assert.assertTrue(actual>=2);
+    }
+
 }
