@@ -7,6 +7,31 @@ import java.util.List;
 
 public class FooterClass extends BaseClass{
 
+    @FindBy(xpath = "//footer[@id=\"glbfooter\"]")
+    WebElement footer;
+    public boolean checkFooter(){
+        if(footer.isEnabled() && footer.isDisplayed()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @FindBy(xpath = "//button[@id=\"ifhItem0\"]")
+    WebElement helpBtn;
+    public boolean checkHelpBtn(){
+        if(helpBtn.isEnabled() && helpBtn.isDisplayed()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    @FindBy(css = "[class=\"gf-legal\"]")
+    WebElement copyrightMsg;
+    public String checkCopyright(){
+       return copyrightMsg.getText();
+    }
+
     @FindBy(xpath = "//footer[@id=\"glbfooter\"] //a[@class=\"thrd gf-bar-a\"]")
     public List<WebElement> footerLinks;
 

@@ -39,6 +39,30 @@ public class HeaderClass extends BaseClass{
         return driver.getCurrentUrl();
     }
 
+    public boolean checkLogo(){
+        return logoLink.isDisplayed();
+    }
+
+    @FindBy(xpath = "//a[@data-sp=\"m570.l2633\"]")
+    WebElement cart;
+    public boolean checkCart(){
+        if(cart.isEnabled() && cart.isDisplayed()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @FindBy(css = "[id=\"gh-topl\"]")
+    WebElement shipToFlag;
+    public boolean checkShipToFlag(){
+        if(shipToFlag.isEnabled() && shipToFlag.isDisplayed()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     @FindBy(css = "[id=\"gh-shop-a\"]")
     WebElement shopByCategory;
     @FindBy(xpath = "//a[@_sp=\"m570.l3412\"][text()=\"Home & garden\"]")

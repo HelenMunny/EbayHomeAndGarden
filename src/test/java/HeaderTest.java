@@ -38,11 +38,35 @@ public class HeaderTest extends BaseClass{
         headerClass.verifyHeaderLinks();
     }
 
+//    Testing if logo is displayed
+    @Test
+    public void testLogo(){
+        boolean actual = headerClass.checkLogo();
+        boolean expected = true;
+        Assert.assertEquals(actual,expected);
+    }
+
+    //    Testing if cart is available
+    @Test
+    public void testCart(){
+        boolean actual = headerClass.checkCart();
+        boolean expected = true;
+        Assert.assertEquals(actual,expected);
+    }
+
 //    Testing if logo image+link is working
     @Test
     public void logoCheckT(){
         String actual = headerClass.logoCheck();
         String expected = "https://www.ebay.com/";
+        Assert.assertEquals(actual,expected);
+    }
+
+    //    Testing if ship to flag is available
+    @Test
+    public void testShipToFlag(){
+        boolean actual = headerClass.checkShipToFlag();
+        boolean expected = true;
         Assert.assertEquals(actual,expected);
     }
 

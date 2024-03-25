@@ -18,6 +18,21 @@ public class FooterTest extends BaseClass{
         quitBrowser();
     }
 
+    //    Testing if footer is available
+    @Test
+    public void testFooter(){
+        boolean actual = footerClass.checkFooter();
+        boolean expected = true;
+        Assert.assertEquals(actual,expected);
+    }
+
+//    checking if copyright msg is according to expectation
+    @Test
+    public void testCopyright(){
+        String actual = footerClass.checkCopyright();
+        Assert.assertTrue(actual.contains("Copyright © 1995-2024 eBay Inc. All Rights Reserved."));
+    }
+
 //    verifying the number of footer links
     @Test
     public void footerT(){
@@ -32,7 +47,13 @@ public class FooterTest extends BaseClass{
         footerClass.verifyFooterLinks();
     }
 
-
+    //    Testing if help button is available
+    @Test
+    public void testHelpBtn(){
+        boolean actual = footerClass.checkHelpBtn();
+        boolean expected = true;
+        Assert.assertEquals(actual,expected);
+    }
 
 
 }
