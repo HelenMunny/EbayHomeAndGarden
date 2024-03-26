@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
@@ -58,6 +59,16 @@ public void verifyLinks(String url){
             }
         }catch(Exception e){
             System.out.println(url+" - is a broken link.");
+        }
+    }
+
+    public void switchTab(){
+        String currTab = driver.getWindowHandle();
+        Set<String> allTabs = driver.getWindowHandles();
+        for(String tab:allTabs){
+            if (currTab != tab){
+                driver.switchTo().window(tab);
+            }
         }
     }
 

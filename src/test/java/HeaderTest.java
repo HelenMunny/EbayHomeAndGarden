@@ -32,6 +32,7 @@ public class HeaderTest extends BaseClass{
         Assert.assertTrue(actual>=69);
     }
 
+
 //    checking if there is any broken link in the header
     @Test(enabled = false)
     public void verifyHeaderLinksT(){

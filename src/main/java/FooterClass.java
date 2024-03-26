@@ -1,9 +1,12 @@
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class FooterClass extends BaseClass{
 
@@ -41,6 +44,22 @@ public class FooterClass extends BaseClass{
         }
         return footerLinks.size();
     }
+
+    public void clickEachFooterLinks(){
+        for(WebElement link:footerLinks){
+            String openTab = Keys.chord(Keys.CONTROL,Keys.ENTER);
+            link.sendKeys(openTab);
+        }
+    }
+
+    public void getURLFooterLinks(){
+        for(WebElement link:footerLinks){
+            String openTab = Keys.chord(Keys.CONTROL,Keys.ENTER);
+            link.sendKeys(openTab);
+            System.out.println(link.getAttribute("href"));
+        }
+    }
+
 
 public void verifyFooterLinks(){
     for(WebElement link:footerLinks){

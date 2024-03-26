@@ -46,4 +46,5 @@ public class BannerTest extends BaseClass{
         Assert.assertTrue(actual>=2);
     }
 
+
 }

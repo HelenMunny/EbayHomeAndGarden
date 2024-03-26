@@ -1,3 +1,4 @@
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,6 +22,21 @@ public class ContainerClass extends BaseClass{
     }
     public Integer countContainerLinks(){
         return containerLinks.size();
+    }
+
+    public void getURLContainerLinks(){
+        for(WebElement link:containerLinks){
+            String openTab = Keys.chord(Keys.CONTROL,Keys.ENTER);
+            link.sendKeys(openTab);
+            System.out.println(link.getAttribute("href"));
+        }
+    }
+
+    public void clickEachContainerLinks(){
+        for(WebElement link:containerLinks){
+            String openTab = Keys.chord(Keys.CONTROL,Keys.ENTER);
+            link.sendKeys(openTab);
+        }
     }
 
     @FindBy(xpath = "//section[@class=\"b-module b-visualnav\"]")

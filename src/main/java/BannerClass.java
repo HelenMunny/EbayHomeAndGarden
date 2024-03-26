@@ -1,3 +1,4 @@
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,6 +17,7 @@ public class BannerClass extends BaseClass{
     public Integer countBannerLinks(){
         return bannerLinks.size();
     }
+
 
     @FindBy(xpath = "//a[@class=\"seo-breadcrumb-text\"]")
     List<WebElement> breadcrumpLinks;

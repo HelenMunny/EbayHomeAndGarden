@@ -55,5 +55,17 @@ public class FooterTest extends BaseClass{
         Assert.assertEquals(actual,expected);
     }
 
+//    clicking footer links one by one
+    @Test
+    public void clickFooterLinks(){
+        footerClass.clickEachFooterLinks();
+    }
+
+//    getting footer urls
+    @Test
+    public void getUrls(){
+        footerClass.getURLFooterLinks();
+    }
+
 
 }

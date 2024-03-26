@@ -38,7 +38,20 @@ public class ContainerTest extends BaseClass{
         Assert.assertTrue(actual>=35);
     }
 
-//    checking how many product sections are present in the page
+    //    getting container urls
+    @Test
+    public void getUrls(){
+        containerClass.getURLContainerLinks();
+    }
+
+    //    clicking container links one by one
+    @Test
+    public void clickContainerLinks(){
+       containerClass.clickEachContainerLinks();
+    }
+
+
+    //    checking how many product sections are present in the page
     @Test
     public void countProductSections(){
         Integer actual = containerClass.countProductSections();
