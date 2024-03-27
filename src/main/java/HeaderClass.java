@@ -30,9 +30,6 @@ public class HeaderClass extends BaseClass{
         }
     }
 
-
-
-
     @FindBy(id = "gh-la")
     WebElement logoLink;
     public String logoCheck(){
@@ -128,12 +125,5 @@ public class HeaderClass extends BaseClass{
         cartBtn.click();
         return driver.getCurrentUrl();
     }
-
-
-
-
-
-
-
 
 }

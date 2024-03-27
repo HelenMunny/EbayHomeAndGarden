@@ -115,7 +115,7 @@ public class HeaderTest extends BaseClass{
     @Test
     public void testHelpAndContact() {
         String actual = headerClass.setHelpAndContact();
-        String expected = "https://www.ebay.com/splashui/captcha?";
+        String expected = "https://www.ebay.com/help/home";
         Assert.assertTrue(actual.contains(expected));
     }
 
@@ -123,18 +123,8 @@ public class HeaderTest extends BaseClass{
     @Test
     public void testCartBtn() {
         String actual = headerClass.setCartBtn();
-        String expected = "https://www.ebay.com/splashui/captcha?";
+        String expected = "https://cart.payments.ebay.com/";
         Assert.assertTrue(actual.contains(expected));
     }
-
-
-
-
-
-
-
-
-
-
 
 }
