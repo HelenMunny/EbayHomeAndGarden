@@ -13,10 +13,10 @@ public class FooterTest extends BaseClass{
         footerClass = PageFactory.initElements(BaseClass.driver,FooterClass.class);
     }
 
-    @AfterMethod
-    public void quit(){
-        quitBrowser();
-    }
+//    @AfterMethod
+//    public void quit(){
+//        quitBrowser();
+//    }
 
     //    Testing if footer is available
     @Test
@@ -49,8 +49,8 @@ public class FooterTest extends BaseClass{
 
     //    Testing if help button is available
     @Test
-    public void testHelpBtn(){
-        boolean actual = footerClass.checkHelpBtn();
+    public void testScrollBtn(){
+        boolean actual = footerClass.checkScrollBtn();
         boolean expected = true;
         Assert.assertEquals(actual,expected);
     }
@@ -61,11 +61,11 @@ public class FooterTest extends BaseClass{
         footerClass.clickEachFooterLinks();
     }
 
+
 //    getting footer urls
     @Test
     public void getUrls(){
         footerClass.getURLFooterLinks();
     }
-
 
 }

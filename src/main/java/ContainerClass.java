@@ -39,6 +39,7 @@ public class ContainerClass extends BaseClass{
         }
     }
 
+
     @FindBy(xpath = "//section[@class=\"b-module b-visualnav\"]")
     List <WebElement> productSections;
     public Integer countProductSections(){
