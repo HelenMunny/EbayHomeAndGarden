@@ -13,10 +13,10 @@ public class FooterTest extends BaseClass{
         footerClass = PageFactory.initElements(BaseClass.driver,FooterClass.class);
     }
 
-//    @AfterMethod
-//    public void quit(){
-//        quitBrowser();
-//    }
+    @AfterMethod
+    public void quit(){
+        quitBrowser();
+    }
 
     //    Testing if footer is available
     @Test

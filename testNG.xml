@@ -10,6 +10,7 @@
             <class name="HeaderTest"/>
             <class name="BannerTest"/>
             <class name="ContainerTest"/>
+            <class name="ShopByCategoryTest"/>
             <class name="FooterTest" />
         </classes>
     </test>
