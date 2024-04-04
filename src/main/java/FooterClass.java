@@ -16,6 +16,12 @@ public class FooterClass extends BaseClass{
 
     @FindBy(xpath = "//footer[@id=\"glbfooter\"]")
     WebElement footer;
+    @FindBy(xpath = "//button[@id=\"ifhItem0\"]")
+    WebElement scrollUpBtn;
+    @FindBy(css = "[class=\"gf-legal\"]")
+    WebElement copyrightMsg;
+    @FindBy(xpath = "//footer[@id=\"glbfooter\"] //a[@class=\"thrd gf-bar-a\"]")
+    public List<WebElement> footerLinks;
     public boolean checkFooter(){
         if(footer.isEnabled() && footer.isDisplayed()){
             return true;
@@ -24,8 +30,7 @@ public class FooterClass extends BaseClass{
         }
     }
 
-    @FindBy(xpath = "//button[@id=\"ifhItem0\"]")
-    WebElement scrollUpBtn;
+
     public boolean checkScrollBtn(){
         if(scrollUpBtn.isEnabled() && scrollUpBtn.isDisplayed()){
             return true;
@@ -33,14 +38,11 @@ public class FooterClass extends BaseClass{
             return false;
         }
     }
-    @FindBy(css = "[class=\"gf-legal\"]")
-    WebElement copyrightMsg;
+
     public String checkCopyright(){
        return copyrightMsg.getText();
     }
 
-    @FindBy(xpath = "//footer[@id=\"glbfooter\"] //a[@class=\"thrd gf-bar-a\"]")
-    public List<WebElement> footerLinks;
 
     public Integer footerA(){
         for(WebElement link:footerLinks){
